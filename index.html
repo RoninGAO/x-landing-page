@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <title>Bootstrap 101 Template</title>
+
+  <!-- Bootstrap -->
+  <link href="./css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+      <script src="./js/html5shiv-3.7.3.min.js"></script>
+      <script src="./js/respond-1.4.2.min.js"></script>
+    <![endif]-->
+  <style type="text/css">
+    /* .container {
+      background: #dededc;
+    } */
+
+    .header,
+    .navbar {
+      background: #fff;
+    }
+
+    .footer {
+      background: #2595D9;
+    }
+  </style>
+  <style>
+    .navbar {
+      margin-bottom: 0px;
+      border-radius: 0;
+    }
+
+    .jumbotron {
+      background-image: url('./image/vattensoft-ad.jpg');
+      background-size: cover;
+      min-height: 70vh;
+      background-position: center center;
+      margin-top: 52px;
+    }
+
+    .navbar-brand {
+      padding: 0px;
+    }
+
+    .logo {
+      width: 48%;
+    }
+
+    .home,
+    .service,
+    .project,
+    .team,
+    .partner {
+      height: 500px;
+      padding-top: 70px;
+      padding-bottom: 70px;
+    }
+
+    .home {
+      background: #bde1c5;
+    }
+
+    .service {
+      background: #e4d5d4;
+    }
+
+    .project {
+      background: #bde1c5;
+    }
+
+    .team {
+      background: #e4d5d4;
+    }
+
+    .partner {
+      background: #bde1c5;
+    }
+
+    .vatten-ad{
+      background: hsla(0, 0%, 0%, 0.5);
+      color: #fff;
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="header container">
+
+      <!-- LOGO及行動裝置按鈕切換區 -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+          <span class="sr-only">導覽列開關</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">
+          <img src="./image/logo.png" alt="" class="logo" />
+        </a>
+      </div>
+
+      <!-- 行動裝置選單隱藏折疊區 -->
+      <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="active">
+            <a href="#">Home</a>
+          </li>
+          <li>
+            <a href="#">Services</a>
+          </li>
+          <li>
+            <a href="#">Project</a>
+          </li>
+          <li>
+            <a href="#">Team</a>
+          </li>
+          <li>
+            <a href="#">Partners</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="jumbotron">
+    <div class="container">
+      <div class="vatten-ad col-sm-12 col-md-6 col-md-offset-6">
+        <h1>VATTEN</h1>
+        <p>vattensoft是一個致力於開發應用程式解決網路設備的公司，歡迎加入 http://vattensoft.com/</p>
+        <p>
+          <a class="btn btn-primary btn-lg" href="#" role="button">詳細內容</a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="main container">
+    <div class="home row">
+      Home
+    </div>
+    <div class="service row">
+      Services
+    </div>
+    <div class="project row">
+      Project
+    </div>
+    <div class="team row">
+      Team
+    </div>
+    <div class="partner row">
+      Partner
+    </div>
+  </div>
+
+  <div class="footer container">
+    <div class="row">
+      <div class="col-md-8">
+        <h3 class="section-title">About Us</h3>
+        <p>We are the team with members from Taiwan. The group started the study and have been distributing ledger technology
+          since 2016. With the accumulated experience and success in Taiwan, we are ready to solve the real problem of network
+          in the world.</p>
+        <p class="copy-right">&copy; 2018 VattenSoft Co., Ltd. All Rights Reserved.
+        </p>
+      </div>
+
+      <div class="col-md-4">
+        <h3 class="section-title">Contact Us</h3>
+        <ul class="contact-info">
+          <li>
+            <i class="icon-map-marker"></i>台北市建國北路一段90號3樓 (
+            <a href="#">map</a>) </li>
+          <li>
+            <i class="icon-envelope"></i>
+            <a href="mailto:service@vattensoft.com">service@vattensoft.com</a>
+          </li>
+          <li>
+            <i class="icon-globe2"></i>
+            <a href="#">+886 2-23758990 </a>
+          </li>
+          <li>
+            <i class="icon-globe2"></i>
+            <a href="#">VattenSoft.com</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="./js/jquery-1.12.4.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="./js/bootstrap.min.js"></script>
+  <script type="text/javascript"> 
+    console.log("TEST");
+    //alert("test");      
+  </script>
+</body>
+
+</html>
