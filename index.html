@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-  <title>Bootstrap 101 Template</title>
+  <title>VattenSoft.com</title>
 
   <!-- Bootstrap -->
   <link href="./css/bootstrap.min.css" rel="stylesheet">
@@ -29,12 +29,38 @@
 
     .footer {
       background: #2595D9;
+      color: #f8f8f8;
     }
-  </style>
-  <style>
+
+    .footer a:link,
+    .footer a:hover,
+    .footer a:visited,
+    .footer a:active {
+      color: #f5f21f;
+      text-decoration: none;
+    }
+
     .navbar {
       margin-bottom: 0px;
       border-radius: 0;
+    }
+
+    .navbar li.active a span:before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      bottom: -2px;
+      left: 0;
+      background-color: #2595D9;
+      /* visibility: hidden; */
+    }
+
+    .navbar-default .navbar-nav>li>a:focus,
+    .navbar-default .navbar-nav>li>a:hover {
+      color: #555;
+      background-color: #e7e7e7;
+      transition: background-color .4s, color .4s;
     }
 
     .jumbotron {
@@ -43,6 +69,7 @@
       min-height: 70vh;
       background-position: center center;
       margin-top: 52px;
+      margin-bottom: 0px;
     }
 
     .navbar-brand {
@@ -58,9 +85,9 @@
     .project,
     .team,
     .partner {
-      height: 500px;
-      padding-top: 70px;
-      padding-bottom: 70px;
+      height: 900px;
+      /* padding-top: 70px;
+      padding-bottom: 70px; */
     }
 
     .home {
@@ -83,17 +110,21 @@
       background: #bde1c5;
     }
 
-    .vatten-ad{
+    .vatten-ad {
       background: hsla(0, 0%, 0%, 0.5);
       color: #fff;
-      padding-top: 20px;
-      padding-bottom: 20px;
+      padding: 20px 20px;
+      border-radius: 6px;
+    }
+
+    .vatten-ad>p {
+      color: #f4f4f4;
     }
   </style>
 </head>
 
 <body>
-
+  <!-- navbar ================================================================================= -->
   <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="header container">
 
@@ -114,85 +145,167 @@
       <div class="collapse navbar-collapse navbar-ex1-collapse">
         <ul class="nav navbar-nav navbar-right">
           <li class="active">
-            <a href="#">Home</a>
+            <a href="#"><span>Home</span></a>
           </li>
           <li>
-            <a href="#">Services</a>
+            <a href="#"><span>Services</span></a>
           </li>
           <li>
-            <a href="#">Project</a>
+            <a href="#"><span>Project</span></a>
           </li>
           <li>
-            <a href="#">Team</a>
+            <a href="#"><span>Team</span></a>
           </li>
           <li>
-            <a href="#">Partners</a>
+            <a href="#"><span>Partners</span></a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
 
+
+
+
+
+  <!--VIS & AD ================================================================================= -->
   <div class="jumbotron">
     <div class="container">
-      <div class="vatten-ad col-sm-12 col-md-6 col-md-offset-6">
-        <h1>VATTEN</h1>
-        <p>vattensoft是一個致力於開發應用程式解決網路設備的公司，歡迎加入 http://vattensoft.com/</p>
-        <p>
-          <a class="btn btn-primary btn-lg" href="#" role="button">詳細內容</a>
-        </p>
+      <div class="col-sm-12 col-md-7 col-md-offset-5">
+        <div class="vatten-ad">
+          <h1>VATTEN</h1>
+          <p>VattenSoft is software developer of the team which provide the total solution of Internet and solve the real problem
+            of Network in the world.</p>
+          <p>Welcome to join us. </p>
+          <p>
+            <a class="btn btn-primary btn-lg" href="http://vattensoft.com/" role="button">details</a>
+          </p>
+        </div>>
       </div>
     </div>
   </div>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!--Section Home ================================================================================= -->
   <div class="main container">
     <div class="home row">
       Home
     </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--Section Service ================================================================================= -->
     <div class="service row">
       Services
     </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--Section Project ================================================================================= -->
     <div class="project row">
       Project
     </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--Section Team ================================================================================= -->
     <div class="team row">
       Team
     </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--Section partner ================================================================================= -->
     <div class="partner row">
       Partner
     </div>
   </div>
 
-  <div class="footer container">
-    <div class="row">
-      <div class="col-md-8">
-        <h3 class="section-title">About Us</h3>
-        <p>We are the team with members from Taiwan. The group started the study and have been distributing ledger technology
-          since 2016. With the accumulated experience and success in Taiwan, we are ready to solve the real problem of network
-          in the world.</p>
-        <p class="copy-right">&copy; 2018 VattenSoft Co., Ltd. All Rights Reserved.
-        </p>
-      </div>
+  <div class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <h3 class="section-title">About Us</h3>
+          <p>We are the team with members from Taiwan. The group started the study and have been distributing ledger technology
+            since 2016. With the accumulated experience and success in Taiwan, we are ready to solve the real problem of
+            network in the world.</p>
+          <p class="copy-right">&copy; 2018 VattenSoft Co., Ltd. All Rights Reserved.
+          </p>
+        </div>
 
-      <div class="col-md-4">
-        <h3 class="section-title">Contact Us</h3>
-        <ul class="contact-info">
-          <li>
-            <i class="icon-map-marker"></i>台北市建國北路一段90號3樓 (
-            <a href="#">map</a>) </li>
-          <li>
-            <i class="icon-envelope"></i>
-            <a href="mailto:service@vattensoft.com">service@vattensoft.com</a>
-          </li>
-          <li>
-            <i class="icon-globe2"></i>
-            <a href="#">+886 2-23758990 </a>
-          </li>
-          <li>
-            <i class="icon-globe2"></i>
-            <a href="#">VattenSoft.com</a>
-          </li>
-        </ul>
+        <div class="col-md-4">
+          <h3 class="section-title">Contact Us</h3>
+          <ul class="contact-info">
+            <li>
+              <i class="icon-map-marker"></i>台北市建國北路一段90號3樓 (
+              <a href="#">map</a>) </li>
+            <li>
+              <i class="icon-envelope"></i>
+              <a href="mailto:service@vattensoft.com">service@vattensoft.com</a>
+            </li>
+            <li>
+              <i class="icon-globe2"></i>
+              <a href="#">+886 2-2375-8990 </a>
+            </li>
+            <li>
+              <i class="icon-globe2"></i>
+              <a href="#">VattenSoft.com</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
