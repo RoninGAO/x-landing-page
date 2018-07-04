@@ -56,7 +56,6 @@
       /* visibility: hidden; */
     }
 
-    .navbar-default .navbar-nav>li>a:focus,
     .navbar-default .navbar-nav>li>a:hover {
       color: #555;
       background-color: #e7e7e7;
@@ -83,8 +82,7 @@
     .home,
     .service,
     .project,
-    .team,
-    .partner {
+    .team {
       height: 900px;
       /* padding-top: 70px;
       padding-bottom: 70px; */
@@ -104,10 +102,6 @@
 
     .team {
       background: #e4d5d4;
-    }
-
-    .partner {
-      background: #bde1c5;
     }
 
     .vatten-ad {
@@ -145,19 +139,29 @@
       <div class="collapse navbar-collapse navbar-ex1-collapse">
         <ul class="nav navbar-nav navbar-right">
           <li class="active">
-            <a href="#"><span>Home</span></a>
+            <a href="#Home">
+              <span>Home</span>
+            </a>
           </li>
           <li>
-            <a href="#"><span>Services</span></a>
+            <a href="#Services">
+              <span>Services</span>
+            </a>
           </li>
           <li>
-            <a href="#"><span>Project</span></a>
+            <a href="#Project">
+              <span>Project</span>
+            </a>
           </li>
           <li>
-            <a href="#"><span>Team</span></a>
+            <a href="#Team">
+              <span>Team</span>
+            </a>
           </li>
           <li>
-            <a href="#"><span>Partners</span></a>
+            <a href="#Contract">
+              <span>Contract Us</span>
+            </a>
           </li>
         </ul>
       </div>
@@ -169,6 +173,7 @@
 
 
   <!--VIS & AD ================================================================================= -->
+  <a id="Home" role="section"></a>
   <div class="jumbotron">
     <div class="container">
       <div class="col-sm-12 col-md-7 col-md-offset-5">
@@ -185,28 +190,23 @@
     </div>
   </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <!--Section Home ================================================================================= -->
   <div class="main container">
+
+
+
+
+
+
+
+
+
+
+    <!--Section Home ================================================================================= -->
+    <!-- 
     <div class="home row">
       Home
     </div>
-
-
-
+ -->
 
 
 
@@ -218,6 +218,7 @@
 
 
     <!--Section Service ================================================================================= -->
+    <a id="Services" role="section"></a>
     <div class="service row">
       Services
     </div>
@@ -235,6 +236,7 @@
 
 
     <!--Section Project ================================================================================= -->
+    <a id="Project" role="section"></a>
     <div class="project row">
       Project
     </div>
@@ -252,6 +254,7 @@
 
 
     <!--Section Team ================================================================================= -->
+    <a id="Team" role="section"></a>
     <div class="team row">
       Team
     </div>
@@ -260,63 +263,61 @@
 
 
 
+    <a id="Contract" role="section"></a>
+    <div class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            <h3 class="section-title">About Us</h3>
+            <p>We are the team with members from Taiwan. The group started the study and have been distributing ledger technology
+              since 2016. With the accumulated experience and success in Taiwan, we are ready to solve the real problem of
+              network in the world.</p>
+            <p class="copy-right">&copy; 2018 VattenSoft Co., Ltd. All Rights Reserved.
+            </p>
+          </div>
 
-
-
-
-
-
-
-
-    <!--Section partner ================================================================================= -->
-    <div class="partner row">
-      Partner
-    </div>
-  </div>
-
-  <div class="footer">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-8">
-          <h3 class="section-title">About Us</h3>
-          <p>We are the team with members from Taiwan. The group started the study and have been distributing ledger technology
-            since 2016. With the accumulated experience and success in Taiwan, we are ready to solve the real problem of
-            network in the world.</p>
-          <p class="copy-right">&copy; 2018 VattenSoft Co., Ltd. All Rights Reserved.
-          </p>
-        </div>
-
-        <div class="col-md-4">
-          <h3 class="section-title">Contact Us</h3>
-          <ul class="contact-info">
-            <li>
-              <i class="icon-map-marker"></i>台北市建國北路一段90號3樓 (
-              <a href="#">map</a>) </li>
-            <li>
-              <i class="icon-envelope"></i>
-              <a href="mailto:service@vattensoft.com">service@vattensoft.com</a>
-            </li>
-            <li>
-              <i class="icon-globe2"></i>
-              <a href="#">+886 2-2375-8990 </a>
-            </li>
-            <li>
-              <i class="icon-globe2"></i>
-              <a href="#">VattenSoft.com</a>
-            </li>
-          </ul>
+          <div class="col-md-4">
+            <h3 class="section-title">Contact Us</h3>
+            <ul class="contact-info">
+              <li>
+                <i class="icon-map-marker"></i>台北市建國北路一段90號3樓 (
+                <a href="#">map</a>) </li>
+              <li>
+                <i class="icon-envelope"></i>
+                <a href="mailto:service@vattensoft.com">service@vattensoft.com</a>
+              </li>
+              <li>
+                <i class="icon-globe2"></i>
+                <a href="#">+886 2-2375-8990 </a>
+              </li>
+              <li>
+                <i class="icon-globe2"></i>
+                <a href="#">VattenSoft.com</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-  <script src="./js/jquery-1.12.4.min.js"></script>
-  <!-- Include all compiled plugins (below), or include individual files as needed -->
-  <script src="./js/bootstrap.min.js"></script>
-  <script type="text/javascript"> 
-    console.log("TEST");
-    //alert("test");      
-  </script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="./js/bootstrap.min.js"></script>
+    <script type="text/javascript"> 
+      console.log("TEST");
+      //alert("test"); 
+      ; $(function () {
+        //alert("document is ready.");
+        $('nav a[href*="#"]:not([href="#"])').click(function () {
+          console.log($(this.hash));
+          var target = $(this.hash);
+          $('html, body').animate({
+            scrollTop: target.offset().top
+          }, 1000);
+          return false;
+        });
+      });
+    </script>
 </body>
 
 </html>
