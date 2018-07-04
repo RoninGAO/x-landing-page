@@ -7,7 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
   <title>VattenSoft.com</title>
-
+  <!-- animate -->
+  <link href="./css/animate.css" rel="stylesheet">
   <!-- Bootstrap -->
   <link href="./css/bootstrap.min.css" rel="stylesheet">
 
@@ -18,9 +19,13 @@
       <script src="./js/respond-1.4.2.min.js"></script>
     <![endif]-->
   <style type="text/css">
-    /* .container {
-      background: #dededc;
-    } */
+    .main h2,
+    .main h3,
+    .main img {
+      text-align: center;
+      padding-top: 0px;
+      padding-bottom: 10px;
+    }
 
     .header,
     .navbar {
@@ -30,6 +35,8 @@
     .footer {
       background: #2595D9;
       color: #f8f8f8;
+      padding-top: 30px;
+      padding-bottom: 30px;
     }
 
     .footer a:link,
@@ -45,7 +52,8 @@
       border-radius: 0;
     }
 
-    .navbar li.active a span:before {
+    .navbar li.active a span:before,
+    .navbar-default .navbar-nav>li>a:hover span:before {
       content: "";
       position: absolute;
       width: 100%;
@@ -79,29 +87,74 @@
       width: 48%;
     }
 
-    .home,
+    .pic>img,
+    .icon>img {
+
+      height: 147px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .pic {
+      position: relative;
+      margin-top: 40px;
+    }
+
+    .team .item {
+      padding-top: 10px;
+      padding-bottom: 10px;
+      background-color: #fff;
+      margin-bottom: 30px;
+      border-radius: 6px;
+      border: 3px #888 solid;
+      transition: all 0.3s ease;
+    }
+
+    .team .item p {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    .team .item:hover {
+      box-shadow: 1px 1px #53a7ea,
+      2px 2px #53a7ea,
+      3px 3px #53a7ea;
+      -webkit-transform: translateX(-3px);
+      transform: translateX(-3px);
+    }
+
     .service,
     .project,
     .team {
-      height: 900px;
-      /* padding-top: 70px;
-      padding-bottom: 70px; */
-    }
-
-    .home {
-      background: #bde1c5;
+      padding-top: 30px;
+      padding-bottom: 30px;
     }
 
     .service {
-      background: #e4d5d4;
+      background: #fff;
     }
 
     .project {
-      background: #bde1c5;
+      background: #d2e9ff;
     }
 
     .team {
-      background: #e4d5d4;
+      background: #ddeae9;
+    }
+
+    .title {
+      margin-bottom: 50px;
+      color: #606059;
+    }
+
+    .title h2 {
+      color: #2595d9;
+    }
+
+    .project .title,
+    .service .title {
+      margin-bottom: 20px;
     }
 
     .vatten-ad {
@@ -113,6 +166,89 @@
 
     .vatten-ad>p {
       color: #f4f4f4;
+    }
+
+    .glyphicon {
+      font-size: 26px;
+      color: #e7e7e7;
+    }
+
+    .contact-info {
+      text-emphasis: horizontal;
+    }
+
+    .contact-info>li {
+      margin-bottom: 1em;
+    }
+
+    .contact-info>li>i {
+      margin-right: .5em;
+    }
+
+    /*vertical-align: middle*/
+
+    .contact-info>li>i::before {
+      height: 100%;
+      display: inline-block;
+      position: relative;
+      vertical-align: middle;
+    }
+
+    .vatten-counter {
+      font-size: 50px;
+      display: block;
+      color: #2595d9;
+      font-family: "PT Sans", Arial, serif;
+      width: 100%;
+      font-weight: 700;
+      margin-bottom: .3em;
+    }
+
+    .vatten-counter-label {
+      color: #444;
+      text-transform: uppercase;
+      font-size: 12px;
+      letter-spacing: 2px;
+      margin-bottom: 2em;
+      display: block;
+    }
+
+    .project-introduction,
+    .service-introduction {
+      color: #444;
+      /* letter-spacing: 2px;*/
+      margin-bottom: 5em;
+      display: block;
+    }
+
+    .icon {
+      text-align: center;
+      width: 100%;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    p,
+    section,
+    section span,
+    section div.box-services,
+    section li,
+    .item {
+      visibility: hidden;
+    }
+
+    .animated {
+      visibility: visible;
+    }
+
+    .to-be-animated {
+      opacity: 0;
+    }
+
+    .to-be-animated.animated {
+      opacity: 1;
     }
   </style>
 </head>
@@ -130,7 +266,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="http://vattensoft.com/">
           <img src="./image/logo.png" alt="" class="logo" />
         </a>
       </div>
@@ -173,151 +309,534 @@
 
 
   <!--VIS & AD ================================================================================= -->
-  <a id="Home" role="section"></a>
-  <div class="jumbotron">
-    <div class="container">
-      <div class="col-sm-12 col-md-7 col-md-offset-5">
-        <div class="vatten-ad">
-          <h1>VATTEN</h1>
-          <p>VattenSoft is software developer of the team which provide the total solution of Internet and solve the real problem
-            of Network in the world.</p>
-          <p>Welcome to join us. </p>
-          <p>
-            <a class="btn btn-primary btn-lg" href="http://vattensoft.com/" role="button">details</a>
-          </p>
-        </div>>
-      </div>
-    </div>
-  </div>
-
-  <div class="main container">
-
-
-
-
-
-
-
-
-
-
-    <!--Section Home ================================================================================= -->
-    <!-- 
-    <div class="home row">
-      Home
-    </div>
- -->
-
-
-
-
-
-
-
-
-
-
-    <!--Section Service ================================================================================= -->
-    <a id="Services" role="section"></a>
-    <div class="service row">
-      Services
-    </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!--Section Project ================================================================================= -->
-    <a id="Project" role="section"></a>
-    <div class="project row">
-      Project
-    </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!--Section Team ================================================================================= -->
-    <a id="Team" role="section"></a>
-    <div class="team row">
-      Team
-    </div>
-
-
-
-
-
-    <a id="Contract" role="section"></a>
-    <div class="footer">
+  <section class="main" data-section="home">
+    <a id="Home" role="section"></a>
+    <div class="jumbotron">
       <div class="container">
-        <div class="row">
-          <div class="col-md-8">
-            <h3 class="section-title">About Us</h3>
-            <p>We are the team with members from Taiwan. The group started the study and have been distributing ledger technology
-              since 2016. With the accumulated experience and success in Taiwan, we are ready to solve the real problem of
-              network in the world.</p>
-            <p class="copy-right">&copy; 2018 VattenSoft Co., Ltd. All Rights Reserved.
+        <div class="col-sm-12 col-md-7 col-md-offset-5">
+          <div class="vatten-ad">
+            <h1 class="to-animate">VATTEN</h1>
+            <p class="to-animate">VattenSoft is software developer of the team which provide the total solution of Internet and solve the real
+              problem of Network in the world.</p>
+            <p class="to-animate">Welcome to join us. </p>
+            <p class="to-animate">
+              <a class="btn btn-primary btn-lg" href="http://vattensoft.com/" role="button">details</a>
             </p>
-          </div>
-
-          <div class="col-md-4">
-            <h3 class="section-title">Contact Us</h3>
-            <ul class="contact-info">
-              <li>
-                <i class="icon-map-marker"></i>台北市建國北路一段90號3樓 (
-                <a href="#">map</a>) </li>
-              <li>
-                <i class="icon-envelope"></i>
-                <a href="mailto:service@vattensoft.com">service@vattensoft.com</a>
-              </li>
-              <li>
-                <i class="icon-globe2"></i>
-                <a href="#">+886 2-2375-8990 </a>
-              </li>
-              <li>
-                <i class="icon-globe2"></i>
-                <a href="#">VattenSoft.com</a>
-              </li>
-            </ul>
           </div>
         </div>
       </div>
     </div>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="./js/jquery-1.12.4.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="./js/bootstrap.min.js"></script>
-    <script type="text/javascript"> 
-      console.log("TEST");
-      //alert("test"); 
+  </section>
+
+
+  <!--Section Service ================================================================================= -->
+  <section class="main service" data-section="service">
+    <a id="Services"></a>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-md-12">
+          <div class="title">
+            <h2 class="to-animate">WE PROVIDE</h2>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12 col-md-8 col-md-offset-2">
+          <div class="service-introduction text-center">
+            <h4 class="to-animate">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, repellendus.</h4>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-md-3">
+          <div class="box-services text-center">
+            <div class="icon to-animate-2">
+              <img src="./image/IPNetwork.jpg" alt="" class="img-responsive">
+            </div>
+            <div class="">
+              <h3 class="to-animate">SDN</h3>
+              <p class="to-animate">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima enim incidunt in temporibus inventore quas
+                dolores sint maxime voluptatem minus?</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-md-3">
+          <div class="box-services text-center">
+            <div class="icon to-animate-2">
+              <img src="./image/Network-Traffic-Management.jpg" alt="" class="img-responsive">
+            </div>
+            <div class="">
+              <h3 class="to-animate">NFV</h3>
+              <p class="to-animate">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima enim incidunt in temporibus inventore quas
+                dolores sint maxime voluptatem minus?</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-md-3">
+          <div class="box-services text-center">
+            <div class="icon to-animate-2">
+              <img src="./image/Network-Security.jpg" alt="" class="img-responsive">
+            </div>
+            <div class="">
+              <h3 class="to-animate">Identity Server</h3>
+              <p class="to-animate">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima enim incidunt in temporibus inventore quas
+                dolores sint maxime voluptatem minus?</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-md-3">
+          <div class="box-services text-center">
+            <div class="icon to-animate-2">
+              <img src="./image/Data-Center.jpg" alt="" class="img-responsive">
+            </div>
+            <div class="">
+              <h3 class="to-animate">Customized App</h3>
+              <p class="to-animate">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima enim incidunt in temporibus inventore quas
+                dolores sint maxime voluptatem minus?</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+  <!--Section Project ================================================================================= -->
+  <section class="main project" data-section="project">
+    <a id="Project"></a>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-md-12">
+          <div class="title">
+            <h2 class="to-animate">PROJECT MILESTONES</h2>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12 col-md-8 col-md-offset-2">
+          <div class="project-introduction text-center">
+            <h4 class="to-animate">Since VattenSoft founded as the solution of SDN, NFV, more and more partners build their solution with us for
+              the future network.</h4>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-md-3">
+          <div class="text-center">
+            <span class="vatten-counter js-counter to-animate" data-from="0" data-to="3" data-speed="4000" data-refresh-interval="50"></span>
+            <span class="vatten-counter-label to-animate">Years</span>
+          </div>
+        </div>
+        <div class="col-xs-12 col-md-3">
+          <div class="text-center">
+            <span class="vatten-counter js-counter to-animate" data-from="0" data-to="8" data-speed="4000" data-refresh-interval="50"></span>
+            <span class="vatten-counter-label to-animate">Coworks</span>
+          </div>
+        </div>
+        <div class="col-xs-12 col-md-3">
+          <div class="text-center">
+            <span class="vatten-counter js-counter to-animate" data-from="0" data-to="15" data-speed="4000" data-refresh-interval="50"></span>
+            <span class="vatten-counter-label to-animate">Projects</span>
+          </div>
+        </div>
+        <div class="col-xs-12 col-md-3">
+          <div class="text-center">
+            <span class="vatten-counter js-counter to-animate" data-from="0" data-to="7" data-speed="4000" data-refresh-interval="50"></span>
+            <span class="vatten-counter-label to-animate">customers</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!--Section Team ================================================================================= -->
+  <section class="main team" data-section="team">
+    <a id="Team"></a>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-md-12">
+          <div class="title">
+            <h2 class="to-animate">VATTENSOFT TEAM</h2>
+          </div>
+        </div>
+      </div>
+      <!--item row1 ================================================-->
+      <div class="row">
+        <div class="col-xs-12 col-md-4">
+          <div class="item  to-animate-2">
+            <div class="pic">
+              <img src="https://fakeimg.pl/256x256/" alt="" class="img-circle img-responsive" />
+            </div>
+            <h3 class="to-animate">member name</h3>
+            <p class="to-animate">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa similique voluptatum cum, beatae necessitatibus
+              fugit vel nemo dolore numquam doloribus? Necessitatibus corporis temporibus, omnis impedit accusantium consequuntur
+              rerum ullam incidunt! leorm member title</p>
+
+          </div>
+        </div>
+        <div class="col-xs-12 col-md-4">
+          <div class="item  to-animate-2">
+            <div class="pic">
+              <img src="https://fakeimg.pl/256x256/" alt="" class="img-circle img-responsive" />
+            </div>
+            <h3 class="to-animate">member name</h3>
+            <p class="to-animate">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa similique voluptatum cum, beatae necessitatibus
+              fugit vel nemo dolore numquam doloribus? Necessitatibus corporis temporibus, omnis impedit accusantium consequuntur
+              rerum ullam incidunt! leorm member title</p>
+
+          </div>
+        </div>
+        <div class="col-xs-12 col-md-4">
+          <div class="item  to-animate-2">
+            <div class="pic">
+              <img src="https://fakeimg.pl/256x256/" alt="" class="img-circle img-responsive" />
+            </div>
+            <h3 class="to-animate">member name</h3>
+            <p class="to-animate">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa similique voluptatum cum, beatae necessitatibus
+              fugit vel nemo dolore numquam doloribus? Necessitatibus corporis temporibus, omnis impedit accusantium consequuntur
+              rerum ullam incidunt! leorm member title</p>
+
+          </div>
+        </div>
+      </div>
+      <!--item row2 ================================================-->
+      <div class="row">
+        <div class="col-xs-12 col-md-4">
+          <div class="item  to-animate-2">
+            <div class="pic">
+              <img src="https://fakeimg.pl/256x256/" alt="" class="img-circle img-responsive" />
+            </div>
+            <h3 class="to-animate">member name</h3>
+            <p class="to-animate">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa similique voluptatum cum, beatae necessitatibus
+              fugit vel nemo dolore numquam doloribus? Necessitatibus corporis temporibus, omnis impedit accusantium consequuntur
+              rerum ullam incidunt! leorm member title</p>
+
+          </div>
+        </div>
+        <div class="col-xs-12 col-md-4">
+          <div class="item  to-animate-2">
+            <div class="pic">
+              <img src="https://fakeimg.pl/256x256/" alt="" class="img-circle img-responsive" />
+            </div>
+            <h3 class="to-animate">member name</h3>
+            <p class="to-animate">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa similique voluptatum cum, beatae necessitatibus
+              fugit vel nemo dolore numquam doloribus? Necessitatibus corporis temporibus, omnis impedit accusantium consequuntur
+              rerum ullam incidunt! leorm member title</p>
+
+          </div>
+        </div>
+        <div class="col-xs-12 col-md-4">
+          <div class="item  to-animate-2">
+            <div class="pic">
+              <img src="https://fakeimg.pl/256x256/" alt="" class="img-circle img-responsive" />
+            </div>
+            <h3 class="to-animate">member name</h3>
+            <p class="to-animate">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa similique voluptatum cum, beatae necessitatibus
+              fugit vel nemo dolore numquam doloribus? Necessitatibus corporis temporibus, omnis impedit accusantium consequuntur
+              rerum ullam incidunt! member title</p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <a id="Contract" role="section"></a>
+  <section class="main footer" data-section="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <h3 class="section-title to-animate">About Us</h3>
+          <p class="to-animate">We are the team with members from Taiwan. The group started the study and have been distributing ledger technology
+            since 2016. With the accumulated experience and success in Taiwan, we are ready to solve the real problem of
+            network in the world.</p>
+          <br/>
+          <br/>
+          <p class="copy-right  to-animate">&copy; 2018 VattenSoft Co., Ltd. All Rights Reserved.
+          </p>
+        </div>
+
+        <div class="col-md-4">
+          <h3 class="section-title to-animate">Contact Us</h3>
+          <ul class="contact-info list-unstyled">
+            <li class="to-animate">
+              <i class="glyphicon glyphicon-map-marker"></i> 台北市建國北路一段90號3樓 (
+              <a href="https://goo.gl/maps/eequ5J3VoW72">Map</a>)</li>
+            <li class="to-animate">
+              <i class="glyphicon glyphicon-envelope"></i>
+              <a href="mailto:service@vattensoft.com">service@vattensoft.com</a>
+            </li>
+            <li class="to-animate">
+              <i class="glyphicon glyphicon-phone-alt"></i>
+              <a href="#">+886 2-2375-8990 </a>
+            </li>
+            <li class="to-animate">
+              <i class="glyphicon glyphicon-globe"></i>
+              <a href="#">VattenSoft.com</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="./js/jquery-1.12.4.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="./js/bootstrap.min.js"></script>
+  <script src="./js/jquery.countTo.js"></script>
+  <script src="./js/jquery.waypoints.min.js"></script>
+
+  <script type="text/javascript"> 
+    var homeAnimate = function () {
+      //waypoint
+      var home = $('section[data-section="home"]')
+      if (home.length > 0) {
+
+        home.waypoint(function (direction) {
+
+          if (direction === 'down' && !$(this.element).hasClass('animated')) {
+
+
+            setTimeout(function () {
+              $('section[data-section="home"] .to-animate').each(function (k) {
+                var el = $(this);
+
+                setTimeout(function () {
+                  el.addClass('fadeInUp animated');
+                }, k * 200, 'easeInOutExpo');
+
+              });
+            }, 200);
+
+
+            setTimeout(function () {
+              home.find('.to-animate-2').each(function (k) {
+                var el = $(this);
+
+                setTimeout(function () {
+                  el.addClass('bounceIn animated');
+                }, k * 200, 'easeInOutExpo');
+
+              });
+            }, 700);
+
+            $(this.element).addClass('animated');
+
+          }
+        }, { offset: '80%' });
+
+      }
+    }
+
+    var serviceAnimate = function () {
+      //waypoint
+      var service = $('section[data-section="service"]')
+      if (service.length > 0) {
+
+        service.waypoint(function (direction) {
+
+          if (direction === 'down' && !$(this.element).hasClass('animated')) {
+
+
+            setTimeout(function () {
+              $('section[data-section="service"] .to-animate').each(function (k) {
+                var el = $(this);
+
+                setTimeout(function () {
+                  el.addClass('fadeInUp animated');
+                }, k * 200, 'easeInOutExpo');
+
+              });
+            }, 200);
+
+
+            setTimeout(function () {
+              service.find('.to-animate-2').each(function (k) {
+                var el = $(this);
+
+                setTimeout(function () {
+                  el.addClass('bounceIn animated');
+                }, k * 200, 'easeInOutExpo');
+
+              });
+            }, 700);
+
+            $(this.element).addClass('animated');
+
+          }
+        }, { offset: '80%' });
+
+      }
+    }
+
+    var projectAnimate = function () {
+      //waypoint
+      var project = $('section[data-section="project"]')
+      if (project.length > 0) {
+
+        project.waypoint(function (direction) {
+
+          if (direction === 'down' && !$(this.element).hasClass('animated')) {
+
+
+            setTimeout(function () {
+              $('section[data-section="project"] .to-animate').each(function (k) {
+                var el = $(this);
+
+                setTimeout(function () {
+                  el.addClass('fadeInUp animated');
+                }, k * 100, 'easeInOutExpo');
+
+              });
+            }, 200);
+
+
+            setTimeout(function () {
+              project.find('.to-animate-2').each(function (k) {
+                var el = $(this);
+
+                setTimeout(function () {
+                  el.addClass('bounceIn animated');
+                }, k * 100, 'easeInOutExpo');
+
+              });
+            }, 700);
+
+            $(this.element).addClass('animated');
+
+          }
+        }, { offset: '80%' });
+
+      }
+    }
+
+    var teamAnimate = function () {
+      //waypoint
+      var team = $('section[data-section="team"]')
+      if (team.length > 0) {
+
+        team.waypoint(function (direction) {
+
+          if (direction === 'down' && !$(this.element).hasClass('animated')) {
+
+
+            setTimeout(function () {
+              $('section[data-section="team"] .to-animate').each(function (k) {
+                var el = $(this);
+
+                setTimeout(function () {
+                  el.addClass('fadeInUp animated');
+                }, k * 200, 'easeInOutExpo');
+
+              });
+            }, 200);
+
+
+            setTimeout(function () {
+              team.find('.to-animate-2').each(function (k) {
+                var el = $(this);
+
+                setTimeout(function () {
+                  el.addClass('bounceIn animated');
+                }, k * 200, 'easeInOutExpo');
+
+              });
+            }, 700);
+
+            $(this.element).addClass('animated');
+
+          }
+        }, { offset: '80%' });
+
+      }
+    }
+
+    var footerAnimate = function () {
+      //waypoint
+      var footer = $('section[data-section="footer"]')
+      if (footer.length > 0) {
+
+        footer.waypoint(function (direction) {
+
+          if (direction === 'down' && !$(this.element).hasClass('animated')) {
+
+
+            setTimeout(function () {
+              $('section[data-section="footer"] .to-animate').each(function (k) {
+                var el = $(this);
+
+                setTimeout(function () {
+                  el.addClass('fadeInUp animated');
+                }, k * 200, 'easeInOutExpo');
+
+              });
+            }, 200);
+
+
+            setTimeout(function () {
+              footer.find('.to-animate-2').each(function (k) {
+                var el = $(this);
+
+                setTimeout(function () {
+                  el.addClass('bounceIn animated');
+                }, k * 200, 'easeInOutExpo');
+
+              });
+            }, 700);
+
+            $(this.element).addClass('animated');
+
+          }
+        }, { offset: '80%' });
+
+      }
+    }
+
       ; $(function () {
-        //alert("document is ready.");
         $('nav a[href*="#"]:not([href="#"])').click(function () {
-          console.log($(this.hash));
+          $('nav ul li[class*="active"]').removeClass('active');
+          $(this).parent().addClass('active');
+
+          //animate
           var target = $(this.hash);
           $('html, body').animate({
-            scrollTop: target.offset().top
+            scrollTop: target.offset().top - 60
           }, 1000);
           return false;
         });
+        $('.vatten-counter').countTo();
+
+        homeAnimate();
+        serviceAnimate();
+        projectAnimate();
+        teamAnimate();
+        footerAnimate();
+
       });
-    </script>
+  </script>
 </body>
 
 </html>
