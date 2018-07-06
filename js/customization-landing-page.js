@@ -207,7 +207,8 @@ var footerAnimate = function () {
     $('nav a[href*="#"]:not([href="#"])').click(function () {
       $('nav ul li[class*="active"]').removeClass('active');
       $(this).parent().addClass('active');
-
+      //Mobile navbar collapse hide when click
+      $('.navbar-collapse.in').collapse('hide');
       //animate
       var target = $(this.hash);
       $('html, body').animate({
